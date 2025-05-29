@@ -6,11 +6,11 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Chillibreeze</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Demo PowerPoint Add-in"/>
+  <DisplayName DefaultValue="TaskPane PowerPoint Add-in"/>
   <Description DefaultValue="A simple Demo PowerPoint add-in"/>
-  <IconUrl DefaultValue="https://storagewebserver.blob.core.windows.net/$web/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://storagewebserver.blob.core.windows.net/$web/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://storagewebserver.blob.core.windows.net/$web/"/>
+  <IconUrl DefaultValue="https://github.com/bhakuparkharsohtun/taskpaneptool/tree/main/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://github.com/bhakuparkharsohtun/taskpaneptool/tree/main/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://github.com/bhakuparkharsohtun/taskpaneptool"/>
   
   <Hosts>
     <Host Name="Presentation"/>
