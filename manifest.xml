@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+  <Id>12345678-1234-1234-1234-123456789abc</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Chillibreeze</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Demo PowerPoint Add-in"/>
+  <Description DefaultValue="A simple Demo PowerPoint add-in"/>
+  <IconUrl DefaultValue="https://storagewebserver.blob.core.windows.net/$web/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://storagewebserver.blob.core.windows.net/$web/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://storagewebserver.blob.core.windows.net/$web/"/>
+  
+  <Hosts>
+    <Host Name="Presentation"/>
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://github.com/bhakuparkharsohtun/taskpaneptool/taskpane.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
