@@ -52,3 +52,58 @@ async function showMessage() {
         alert("Error: " + error.message);
     }
 }
+
+
+async function alignToGuide(direction) {
+    try {
+        await PowerPoint.run(async (context) => {
+            const slide = context.presentation.slides.getSelected();
+            const shapes = slide.shapes;
+            const selectedShapes = shapes.getSelected();
+
+            selectedShapes.load("items");
+            await context.sync();
+
+            if (selectedShapes.items.length === 0) {
+                return alert("Select a shape to align.");
+            }
+
+            const guidePositions = {
+                top: 50,
+                bottom: 400,
+                left: 50,
+                right: 600
+            };
+
+            selectedShapes.items.forEach(shape => {
+                shape.load(["top", "left", "height", "width"]);
+            });
+
+            await context.sync();
+
+            selectedShapes.items.forEach(shape => {
+                switch (direction) {
+                    case "top":
+                        shape.top = guidePositions.top;
+                        break;
+                    case "bottom":
+                        shape.top = guidePositions.bottom - shape.height;
+                        break;
+                    case "left":
+                        shape.left = guidePositions.left;
+                        break;
+                    case "right":
+                        shape.left = guidePositions.right - shape.width;
+                        break;
+                }
+            });
+
+            await context.sync();
+            alert(`Aligned shapes to ${direction}`);
+        });
+    } catch (error) {
+        console.error(error);
+        alert("Error aligning shapes: " + error.message);
+    }
+}
+
